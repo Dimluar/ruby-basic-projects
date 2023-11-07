@@ -16,7 +16,13 @@ def bubble_sort(data)
 
     [sorted_data, completed]
   end
-  complete_one_instance(data)
+
+  completed = false
+  until completed
+    sorted_data, completed = complete_one_instance(data)
+  end
+
+  sorted_data
 end
 
 p bubble_sort([4,3,78,2,0,2])
